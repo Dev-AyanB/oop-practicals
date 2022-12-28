@@ -46,8 +46,6 @@ class student{
 			cout<<"\nFile doesn't exist !";
 		}
 		else{
-			f>>name;
-			f>>roll;
 			cout<<"\nName : "<<name<<" ";
 			cout<<"Roll No. : "<<roll<<"\n";				
 			f.close();
@@ -81,7 +79,7 @@ int main(){
 				for(int i=0;i<t;i++){
 					cout<<"\n------STUDNET "<<i+1<<"------";
 					
- 					f.write((char*)&s[i],sizeof s[i]);
+ 					f.read((char*)&s[i],sizeof s[i]);
 					s[i].display();	
 				}
 			case 0: exit(0);
